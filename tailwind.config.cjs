@@ -8,11 +8,8 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       'black': '#000000',
-      'semi-black': '#333333',
-      'semi-white': '#FFFDF8',
-      "darkBlack": "#060e0c",
-      'darkGreen': '#19352A',
-      'primary': '#007683'
+      'semi-black': '#292627',
+      'purple': '#751785',
     }
   },
   plugins: [],
