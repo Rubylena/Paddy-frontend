@@ -17,10 +17,10 @@ const SignUp = () => {
 
           google.accounts.id.renderButton(document.getElementById("signUpDiv"), {
               // type: "standard", or icon
-              theme: "filled_black", // filled_blue, outline
-              text: "continue_with", // signin_with, signin, signup_with
+              theme: "outline", // filled_blue, filled_black
+              text: "signup_with", // signin_with, signin, continue_with
               shape: "pill", // rectangular, circle, square
-              // size: small, large, medium
+              size: "medium", // large, small
               //logo_alignment: left, center
               //width: max-width=400
               // locale: to set language
@@ -30,28 +30,22 @@ const SignUp = () => {
 
   return (
     <>
-    <nav style={{ padding: "2rem" }}>
-        <Link to="/">Go Back</Link>
-      </nav>
-      <header style={{ textAlign: "center" }}>
-        <h1>Register to continue</h1>
-      </header>
-      <main
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {loading ? (
-          <div>Loading....</div>
-        ) : (
-          <div id="signUpDiv" data-text="signup_with"></div>
-        )}
+      <main className='flex justify-center gap-24 items-center h-full' >
+        <div className='flex flex-col items-center gap-5'>
+          <h2 className='text-2xl font-bold'>Sign Up</h2>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {loading ? (
+            <div>Loading....</div>
+          ) : (
+            <div id="signUpDiv" data-text="signup_with"></div>
+          )}
+        </div>
+        <hr className='border-r border-border h-full' />
+        <div className='text-right '>
+          <p className='text-xl font-medium'>“Code today, code tomorrow, code forever”</p>
+          <span>Coderholic</span>
+        </div>
       </main>
-      <footer></footer>
     </>
   )
 }

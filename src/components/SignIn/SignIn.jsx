@@ -17,13 +17,10 @@ const SignIn = () => {
 
           google.accounts.id.renderButton(document.getElementById("loginDiv"), {
               // type: "standard", or icon
-              theme: "filled_black", // filled_blue, outline
-              text: "signin_with", // signin_with, signin, signup_with
-              shape: "pill", // rectangular, circle, square
-              // size: small, large, medium
-              //logo_alignment: left, center
-              //width: max-width=400
-              // locale: to set language
+              theme: "outline",
+              text: "signin_with",
+              shape: "pill",
+              size: "medium", 
           })
         // google.accounts.id.prompt()
         }
@@ -31,23 +28,18 @@ const SignIn = () => {
 
   return (
     <>
-      <nav style={{ padding: "2rem" }}>
-        <Link to="/">Go Back</Link>
-      </nav>
-      <header style={{ textAlign: "center" }}>
-        <h1>Login to continue</h1>
-      </header>
-      <main
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        {error && <p style={{ color: "red" }}>{error}</p>}
-        {loading ? <div>Loading....</div> : <div id="loginDiv"></div>}
-      </main>
+      <main className='flex justify-center gap-24 items-center h-full' >
+          <div className='flex flex-col items-center gap-5'>
+            <h2 className='text-2xl font-bold'>Sign In</h2>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            {loading ? <div>Loading....</div> : <div id="loginDiv"></div>}
+          </div>
+          <hr className='border-r border-border h-full' />
+          <div className='text-right '>
+            <p className='text-xl font-medium'>“Code today, code tomorrow, code forever”</p>
+            <span>Coderholic</span>
+          </div>
+        </main>
       <footer></footer>
     </>
   )

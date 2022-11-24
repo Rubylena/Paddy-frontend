@@ -6,6 +6,7 @@ import SignIn from './components/SignIn/SignIn'
 import SignUp from './components/SignUp/SignUp'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Home from './pages/Home/Home'
+// require("dotenv/config");
 
 function App() {
   const [user, setUser] = useState({});
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className='flex flex-col h-screen justify-between'>
       <Router>
-        <Nav  />
+        <Nav user={user} />
         <Routes>
           <Route path="/" element={user?.email ? <Navigate to='/dashboard' /> : <Home />} />
           <Route element={user?.email ? <Navigate to='/dashboard' /> : <SignUp />} path='/sign-up' />

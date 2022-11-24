@@ -7,23 +7,15 @@ const Dashboard = ({ user }) => {
   };
 
   return (
-    <div style={{ textAlign: "center", margin: "3rem" }}>
-      <h1>Dear {user?.email}</h1>
+    <div className='h-full'>
+      {/* <h1>Dear {user?.email}</h1> */}
 
-      <p>
-        You are viewing this page because you are logged in or you just signed up
-      </p>
-
-      <div>
+      <div
+      className='flex justify-end'
+      >
         <button
           onClick={logout}
-          style={{
-            color: "red",
-            border: "1px solid gray",
-            backgroundColor: "white",
-            padding: "0.5rem 1rem",
-            cursor: "pointer",
-          }}
+          className='border border-border py-2 px-4 text-red'
         >
           Logout
         </button>
