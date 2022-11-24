@@ -34,8 +34,8 @@ const SignIn = () => {
             {error && <p style={{ color: "red" }}>{error}</p>}
             {loading ? <div>Loading....</div> : <div id="loginDiv"></div>}
           </div>
-          <hr className='border-r border-border h-full' />
-          <div className='text-right '>
+          <hr className='border-r border-border h-full hidden md:block' />
+          <div className='text-right hidden md:block'>
             <p className='text-xl font-medium'>“Code today, code tomorrow, code forever”</p>
             <span>Coderholic</span>
           </div>

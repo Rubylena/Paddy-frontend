@@ -7,7 +7,7 @@ import './nav.scss'
 const Nav = ({ user }) => {
   return (
     <header className='header'>
-      <nav className='flex justify-between items-center py-5 px-10'>
+      <nav className='flex flex-col sm:flex-row gap-2 justify-between items-center py-5 px-10'>
         <Link to='/'><h1 className='font-serif font-black text-2xl'>PADDY</h1></Link>
         {/* <div className='flex gap-1 items-center'>
           <Link to='/' >
