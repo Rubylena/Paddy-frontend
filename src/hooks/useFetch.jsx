@@ -8,6 +8,10 @@ const useFetch = (url) => {
       setLoading(true)
       fetch(url, {
         method: "POST",
+        mode: 'cors',
+        cache: 'default',
+        // mode: "no-cors",
+        // credentials: "same-origin",
         headers: {
           "Content-Type": "application/json",
         },

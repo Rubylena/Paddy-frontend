@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import useFetch from '../../hooks/useFetch'
 
 const SignIn = () => {
     const { handleGoogle, loading, error } = useFetch(
-        "http://localhost:5152/login"
+        "https://paddy-server.netlify.app/.netlify/functions/api/login"
+        // "http://localhost:8888/login"
     )
 
     useEffect(() => {

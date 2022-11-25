@@ -4,7 +4,8 @@ import useFetch from '../../hooks/useFetch'
 
 const SignUp = () => {
     const { handleGoogle, loading, error } = useFetch(
-        "http://localhost:5152/signup"
+        "https://paddy-server.netlify.app/.netlify/functions/api/signup"
+        // "http://localhost:8888/signup"
     )
 
     useEffect(() => {
